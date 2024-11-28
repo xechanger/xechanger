@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Conditioner Details</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #007bff;
+            color: white;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+            padding: 20px;
+        }
+
+        .content-box {
+            display: flex;
+            gap: 20px;
+            background-color: white;
+            padding: 21px;  
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px black;
+            max-width: 1000px; 
+            width: 100%;
+        }
+
+        .content-box img {
+            border-radius: 8px;
+        }
+
+        .details {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .details h2 {
+            margin: 0;
+            color: gray;
+        }
+
+        .details p {
+            color: gray;
+        }
+
+        .buy-back, .add-to-cart {
+            margin-top: 10px;
+            padding: 10px 15px;
+            text-decoration: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            text-align: center;
+            display: inline-block;
+        }
+
+        .buy-back:hover, .add-to-cart:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Air Conditioner</h1>
+    </header>
+    <main>
+        <div class="content-box">
+            <img width="350px" src="ac.jpg" alt="Air Conditioner"> 
+            <div class="details">
+                <h2>Air Conditioner</h2>
+                <p>
+                    Lloyd 1.5 Ton 3 Star Inverter Split AC (5 in 1 Convertible, Copper, Anti-Viral + PM 2.5 Filter, 2023 Model, White with Chrome Deco Strip, GLS18I3FWAGC)
+                </p>
+                <p>Condition: Good</p>
+                <p>Damage Percent: 19% </p>
+                <p>Discount : 20% INR</p>
+                <p><strong>Price:</strong> </p>
+                <a href="buy.html" class="buy-back">Back to Buy Page</a>
+                <a href="cart.html" class="add-to-cart">Add to Cart</a> 
+        </div>
+    </main>
+</body>
+</html>

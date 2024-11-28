@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - Xechange Marketplace</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- Font Awesome -->
+    <style>
+        body.cart {
+            background: linear-gradient(135deg, #ffecd2, #fcb69f);
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: #111;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        nav a.active {
+            text-decoration: underline;
+        }
+
+        nav i {
+            margin-right: 5px;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin: 7;
+        }
+
+        section.cart {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        section.cart h2 {
+            font-size: 2rem;
+            color: #ff6f61;
+        }
+
+        section.cart h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .cart-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .cart-item {
+            background: #f9f9f9;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 5px 5px 15px black;
+            text-align: center;
+            margin: 35px;
+        }
+
+        .cart-item img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+
+        .cart-item h4 {
+            margin: 10px 0;
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        .cart-item p {
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        .cart-item button {
+            margin-top: 10px;
+            padding: 8px 12px;
+            border: none;
+            background-color: #ff6f61;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .cart-item button:hover {
+            background-color: #e85b50;
+        }
+    </style>
+</head>
+
+<body class="cart">
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Xechange Marketplace Logo">
+        </div>
+        <h1>Xechange Marketplace</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html#home"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="buy.html"><i class="fas fa-shopping-bag"></i> Buy</a></li>
+                <li><a href="sell.html"><i class="fas fa-dollar-sign"></i> Sell</a></li>
+                <li><a href="index.html#contact"><i class="fas fa-phone"></i> Contact</a></li>
+                <li><a href="cart.html" class="active"><i class="fas fa-shopping-cart"></i> Your Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="cart" class="cart">
+        <h2>Welcome to Your Cart</h2>
+        <h3>Here are your selected items:</h3>
+
+        <div class="cart-items">
+            <div class="cart-item">
+                <img src="item1.jpg" alt="Item 1">
+                <h4>Item Name 1</h4>
+                <p>Price: $10.00</p>
+                <button>Remove</button>
+            </div>
+
+            <div class="cart-item">
+                <img src="item2.jpg" alt="Item 2">
+                <h4>Item Name 2</h4>
+                <p>Price: $20.00</p>
+                <button>Remove</button>
+            </div>
+
+            <div class="cart-item">
+                <img src="item3.jpg" alt="Item 3">
+                <h4>Item Name 3</h4>
+                <p>Price: $15.00</p>
+                <button>Remove</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <i class="fas fa-shopping-cart">Cart</i>
+        <p>&copy; 2024 Xechange Marketplace. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

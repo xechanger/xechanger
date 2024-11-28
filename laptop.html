@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samsung Laptop Details</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #007bff;
+            color: white;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+            padding: 20px;
+        }
+
+        .content-box {
+            display: flex;
+            gap: 20px;
+            background-color: white;
+            padding: 21px;  
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px black;
+            max-width: 1000px; 
+            width: 100%;
+        }
+
+        .content-box img {
+            border-radius: 8px;
+        }
+
+        .details {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .details h2 {
+            margin: 0;
+            color: gray;
+        }
+
+        .details p {
+            color: gray;
+        }
+
+        .buy-back, .add-to-cart {
+            margin-top: 10px;
+            padding: 10px 15px;
+            text-decoration: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            text-align: center;
+            display: inline-block;
+        }
+
+        .buy-back:hover, .add-to-cart:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Samsung Laptop</h1>
+    </header>
+    <main>
+        <div class="content-box">
+            <img width="350px" src="laptop.webp" alt="Samsung Laptop"> 
+            <div class="details">
+                <h2>Samsung Laptop</h2>
+                <p>
+                    Samsung Galaxy Book3 Pro 360 Intel 13th Gen i7 EvoTM 40.62cm(16") Touchscreen 2-in-1 3K Display, 120Hz, Thin & Light Laptop(16 GB/1 TB SSD/Windows 11/MS Office/S-Pen/Graphite/1.6Kg), NP960QFG-KA3IN
+                </p>
+                <p>Condition: Good</p>
+                <p>Damage Percent: 10% </p>
+                <p>Discount : 30% INR</p>
+                <p><strong>Price:</strong> </p>
+                <a href="buy.html" class="buy-back">Back to Buy Page</a>
+                <a href="cart.html" class="add-to-cart">Add to Cart</a> 
+            </div>
+        </div>
+    </main>
+</body>
+</html>

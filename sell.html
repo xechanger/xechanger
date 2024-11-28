@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Your Items - Xechange Marketplace</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: hsl(0, 17%, 82%);
+        }
+
+       header {
+            background-color: #000000;
+            color: rgb(0, 0, 0);
+            padding: 20px 0;
+        }
+
+        header .logo img {
+            max-width: 120px;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            color: #ffffff;
+            padding: 14px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        nav a.active {
+            text-decoration: underline;
+        }
+
+        nav i {
+            margin-right: 5px;
+        }
+
+        .sell-form-section {
+            /* background: linear-gradient(100deg,  ); */
+            background: rgb(101, 97, 97);
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .sell-form-section .container {
+            border: 1px solid black;
+            box-shadow: 0 10px 20px rgba(5, 5, 15, black);
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(5, 5, 15, black)
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #ffffff;
+            margin-bottom: 30px;
+        }
+
+        form {
+            display: grid;
+            gap: 20px;
+            text-align: left;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            height: 150px;
+        }
+
+        .cta-button {
+            padding: 15px 30px;
+            background-color: #007bff;
+            color: white;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            background-color: #111;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        footer p {
+            margin-top: 15px;
+            font-size: 1rem;
+        }
+
+        footer .footer-nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            list-style-type: none;
+            margin-top: 20px;
+        }
+
+        footer .footer-nav ul li a {
+            color: rgb(255, 0, 0);
+            font-size: 1rem;
+            text-transform: uppercase;
+            font-weight: 500;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        footer .footer-nav ul li a:hover {
+            background-color: #007bff;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #111;
+            color: white;
+            padding: 10px 5px;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body class="sell">
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Xechange Marketplace Logo">
+        </div>
+        <h1>Xechange Marketplace</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html#home"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="buy.html"><i class="fas fa-shopping-bag"></i> Buy</a></li>
+                <li><a href="sell.html"class="active"><i class="fas fa-dollar-sign"></i> Sell</a></li>
+                <li><a href="index.html#contact"><i class="fas fa-phone"></i> Contact</a></li>
+                <li><a href="cart.html" ><i class="fas fa-shopping-cart"></i> Your Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section style="background: linear-gradient(135deg(blue, pink));" class="sell-form-section">
+            <div class="container">
+                <h2>Sell Your Luxury Item</h2>
+                <p style="color: rgb(0, 0, 0);">Fill in the details below to list your authenticated luxury item for sale.</p>
+
+                <form action="submit-item.html" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="item-name">Item Name</label>
+                        <input type="text" id="item-name" name="item_name" placeholder="Enter item name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="item-description">Item Description</label>
+                        <textarea id="item-description" name="item_description" placeholder="Describe your item"
+                            required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="item-category">Category</label>
+                        <select id="item-category" name="item_category" required>
+                            <option value="luxury-watch">none</option>
+                            <option value="luxury-watch">Fashion item(watch , dress , bag , shoes etc.)</option>
+                            <option value="designer-bag">Digital item</option>
+                            <option value="jewelry">Jewelry</option>
+                            <option value="luxury-watch">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="item-price">Price (INR)</label>
+                        <input type="number" id="item-price" name="item_price" placeholder="Enter price" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="item-image">Upload Item Image</label>
+                        <input type="file" id="item-image" name="item_image" accept="image/*" required>
+                    </div>
+
+                    <button type="submit" class="cta-button">Submit Item</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Xechange Marketplace. All rights reserved.</p>
+        <p>
+            <i class="fas fa-shopping-bag"></i> Sell
+        </p>
+    </footer>
+</body>
+
+</html>

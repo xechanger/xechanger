@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xechange Marketplace</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        nav ul li a.active {
+            border-bottom: 2px solid #007bff;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Xechange Logo">
+        </div>
+        <h1 class="index">Xechange Marketplace</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html#home" class="active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="buy.html"><i class="fas fa-shopping-bag"></i> Buy</a></li>
+                <li><a href="sell.html"><i class="fas fa-dollar-sign"></i> Sell</a></li>
+                <li><a href="index.html#contact"><i class="fas fa-phone"></i> Contact</a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Your Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="section">
+        <h2 class="h2">Welcome to the Xechange Marketplace</h2>
+        <p class="p" style="color: rgb(0, 0, 0); ">Buy and sell authenticated second-hand luxury items, including
+            fashion, watches, and bags.</p>
+        <video autoplay loop muted width="auto" height="auto" src="video.mp4"></video>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <p>Have questions? <a href="xechange@gmail.com">Email us.</a></p>
+        <form action="submit_form.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p class="box">Home</p>
+        <p class="box">
+            <i class="fas fa-home"></i> Home
+        </p>
+
+        <p>&copy; 2024 Xechange Marketplace. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
