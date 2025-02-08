@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My First Website</title>
+<style>
+body {
+  font-family: sans-serif;
+  background-color: lightgray;
+  margin: 0; /* Remove default body margin */
+}
+
+h1 {
+  color: blue;
+  text-align: center;
+  padding-top: 60px; /* Adjust padding to avoid overlap */
+}
+
+.hamburger {
+  position: fixed; /* Stay in place */
+  top: 20px; /* Adjust top position as needed */
+  left: 20px; /* Adjust left position as needed */
+  cursor: pointer;
+  z-index: 100; /* Ensure it's above other content */
+}
+
+.hamburger div {
+  width: 30px;
+  height: 5px;
+  background-color: black;
+  margin: 5px 0;
+}
+
+/* Optional: Add some animation on hover */
+.hamburger:hover div {
+  background-color: darkblue;
+}
+
+/* Style for the menu (initially hidden) */
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px; /* Adjust width as needed */
+  height: 100%;
+  background-color: white;
+  transform: translateX(-250px); /* Hide off-screen */
+  transition: transform 0.3s ease-in-out; /* Smooth animation */
+  z-index: 99; /* Below the hamburger but above page content */
+  padding-top: 60px; /* Space for the hamburger */
+  overflow-y: auto; /* Add scroll if menu content overflows */
+}
+
+.menu.open {
+  transform: translateX(0); /* Show on click */
+}
+
+.menu a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+/* Style for the header (sticky) */
+header {
+  position: sticky; /* Make the header sticky */
+  top: 0; /* Stick to the top */
+  background-color: #f0f0f0; /* Example background color */
+  padding: 10px 0;
+  z-index: 98; /* Below hamburger but above content */
+  width: 100%;
+}
+
+header h1 {
+  padding-top: 0; /* Reset heading padding within header */
+  margin: 0 auto; /* Center the heading */
+  max-width: 960px; /* Set max width for larger screens */
+}
+
+/* Example main content styling */
+main {
+  padding: 20px;
+  margin-top: 60px; /* Adjust top margin to avoid overlap with sticky header */
+  max-width: 960px; /* Set max width for larger screens */
+  margin: 60px auto 0; /* Center content and adjust top margin */
+}
+
+</style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to my website!</h1>
+  </header>
+
+  <main>
+    <p>This is a simple example of an HTML page with a sticky header and a hamburger menu.</p>
+    <p>Add more content here...</p>
+    </main>
+
+
+  <div class="hamburger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <div class="menu">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </div>
+
+<script>
+function toggleMenu() {
+  const menu = document.querySelector('.menu');
+  menu.classList.toggle('open');
+}
+</script>
+
+</body>
+</html>

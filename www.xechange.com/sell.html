@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell on Our Website</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .header.finisher-header {
+            width: 100%;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.5);
+            width: 100%;
+            position: absolute;
+            top: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 0.5rem 1rem;
+            transition: 0.3s;
+        }
+
+        nav a:hover,
+        nav a.active {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            text-decoration: underline;
+        }
+
+        h1 {
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger div {
+            width: 30px;
+            height: 4px;
+            background: white;
+            margin: 5px;
+            transition: 0.3s;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                background: rgba(0, 0, 0, 0.8);
+                width: 200px;
+                padding: 1rem;
+                text-align: center;
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        h1, h2, h3 {
+            font-weight: 600;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff; /* Example blue color */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        /* Form Styling */
+        .sell-form {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            height: 120px;
+        }
+
+        input[type="file"] {
+            margin-top: 5px;
+        }
+
+        .submit-button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .submit-button:hover {
+            background-color: #0056b3;
+        }
+
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            h2 {
+                font-size: 1.2em;
+            }
+        }
+
+        footer {
+            position: relative;
+            margin-top: 195px;
+            /* width: 100%; */
+            background-color: #3586ff;
+            /* background: linear-gradient(to right, #6a11cb, #2575fc); */
+
+            min-height: 100px;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        footer .social-icon,
+        footer .menu {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0px;
+        }
+
+        footer .social-icon li,
+        footer .menu {
+            list-style: none;
+        }
+
+        footer .social-icon li a,
+        footer .menu li a {
+            font-size: 2em;
+            color: #fff;
+            margin: 0px 10px;
+            display: inline-block;
+            transition: 0.5s;
+        }
+
+        footer .social-icon li a:hover {
+            transform: translateY(-10px);
+        }
+
+        footer .menu li a {
+            font-size: 1.2em;
+            color: #fff;
+            margin: 0px 10px;
+            display: inline-block;
+            transition: 0.5s;
+            text-decoration: none;
+            opacity: 0.75;
+        }
+
+        footer .menu li a:hover {
+            opacity: 1;
+
+        }
+
+        footer p {
+            color: #fff;
+            text-align: center;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        footer .wave {
+            position: absolute;
+            top: -100px;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: url(wave.png);
+            background-size: 1000px 100px;
+        }
+
+        footer .wave#wave1 {
+            z-index: 1000;
+            opacity: 1;
+            bottom: 0;
+            animation: Wave 4s linear infinite;
+        }
+
+        footer .wave#wave2 {
+            z-index: 999;
+            opacity: 0.5;
+            bottom: 10px;
+            animation: Wave2 4s linear infinite;
+        }
+
+        footer .wave#wave3 {
+            z-index: 1000;
+            opacity: 0.2;
+            bottom: 15px;
+            animation: Wave 3s linear infinite;
+        }
+
+        footer .wave#wave4 {
+            z-index: 999;
+            opacity: 0.7;
+            bottom: 20px;
+            animation: Wave2 2s linear infinite;
+        }
+
+        @keyframes Wave {
+            0% {
+                background-position-x: 1000px;
+            }
+
+            100% {
+                background-position-x: 0px;
+            }
+        }
+
+        @keyframes Wave2 {
+            0% {
+                background-position-x: 0px;
+            }
+
+            100% {
+                background-position-x: 1000px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header finisher-header">
+            <!-- Navigation -->
+            <nav>
+                <a href="index3.html">Home</a>
+                <a href="aboutus.html">About</a>
+                <a href="sell.html" class="active">Sell</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <!-- Main Content -->
+            <h1>Welcome to Xechange Marketplace</h1>
+        </div>    
+    </header>
+
+    <div class="container">
+        <h1>Start Selling Today</h1>
+
+        <section class="section">
+            <h2>Why Sell on Our Platform?</h2>
+            <p>Reach a wide audience of engaged buyers and grow your business with us.</p>
+            <ul>
+                <li><strong>Large Customer Base:</strong> Tap into our extensive network of active users.</li>
+                <li><strong>Easy Listing Process:</strong> List your products quickly and effortlessly.</li>
+                <li><strong>Secure Transactions:</strong> Benefit from our secure payment gateway and buyer protection.</li>
+                <li><strong>Marketing Tools:</strong> Utilize our marketing resources to promote your products.</li>
+                <li><strong>Dedicated Support:</strong> Get assistance from our support team whenever you need it.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>How It Works</h2>
+            <p>Selling on our platform is simple and straightforward.</p>
+            <ol>
+                <li><strong>Create an Account:</strong> Sign up for a seller account in just a few minutes.</li>
+                <li><strong>List Your Products:</strong> Add your products with descriptions, images, and pricing.</li>
+                <li><strong>Manage Your Orders:</strong> Track your orders, process payments, and ship your products.</li>
+                <li><strong>Get Paid:</strong> Receive your earnings directly into your account.</li>
+            </ol>
+        </section>
+
+        <section class="section">
+            <h2>List Your Item</h2>
+
+            <form class="sell-form">
+                <div class="form-group">
+                    <label for="item-name">Item Name</label>
+                    <input type="text" id="item-name" name="item-name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="item-description">Item Description</label>
+                    <textarea id="item-description" name="item-description" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <select id="category" name="category">
+                        <option value="none">None</option>
+                        <option value="clothing">Clothing</option>
+                        <option value="electronics">Electronics</option>
+                        <option value="home">Home Goods</option>
+                        </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="item-price">Price (INR)</label>
+                    <input type="text" id="item-price" name="item-price" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="item-image">Upload Item Image</label>
+                    <input type="file" id="item-image" name="item-image">
+                </div>
+
+                <button type="submit" class="submit-button">SUBMIT ITEM</button>
+            </form>
+        </section>
+
+
+        <section class="section">
+            <h2>Get Started Now</h2>
+            <p>Ready to start selling? Join our community of successful sellers today.</p>
+            <a href="#" class="cta-button">Create Your Seller Account</a>
+        </section>
+
+        <section class="section">
+            <h2>Frequently Asked Questions</h2>
+            <h3>What are the fees?</h3>
+            <p>We have a competitive fee structure. Please visit our <a href="#">pricing page</a> for details.</p>
+
+            <h3>What products can I sell?</h3>
+            <p>You can sell a wide variety of products.  Please review our <a href="#">seller guidelines</a> for a complete list of prohibited items.</p>
+
+            <h3>How do I get paid?</h3>
+            <p>We offer several payment options. You can choose the one that works best for you.</p>
+        </section>
+    </div>
+    
+    
+<footer>
+    <div class="wave" id="wave1"></div>
+    <div class="wave" id="wave2"></div>
+    <div class="wave" id="wave3"></div>
+    <div class="wave" id="wave4"></div>
+    <ul class="social-icon">
+        <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+        <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+        <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+        <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+    </ul>
+    <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Team</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    <p>©2025 Xechange Marketplace | All Right Reserved</p>
+</footer>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="script.js"></script>
+<script src="finisher-header.es5.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    new FinisherHeader({
+        "count": 4,
+        "size": {
+            "min": 1200,
+            "max": 1500,
+            "pulse": 0.1
+        },
+        "speed": {
+            "x": {
+                "min": 0,
+                "max": 0.2
+            },
+            "y": {
+                "min": 0,
+                "max": 0.2
+            }
+        },
+        "colors": {
+            "background": "#ab51ff",
+            "particles": [
+                "#ff636b",
+                "#fbff56",
+                "#ffc648",
+                "#ff77ff"
+            ]
+        },
+        "blending": "lighten",
+        "opacity": {
+            "center": 0.8,
+            "edge": 0.2
+        },
+        "skew": -2,
+        "shapes": [
+            "t",
+            "c",
+            "s"
+        ]
+    });
+
+
+
+    function toggleMenu() {
+        document.querySelector(".nav-links").classList.toggle("show");
+    }
+
+
+</script>
+
+</body>
+</html>
