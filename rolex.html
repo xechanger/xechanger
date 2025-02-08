@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rolex Submariner Date - Second Hand</title>
+    <style>
+        /* ... (same CSS as before) ... */
+        body {
+            font-family: 'Arial', sans-serif; /* A clean, readable font */
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .product-page {
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 20px;
+            display: flex; /* Use flexbox for layout */
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+        }
+
+        .product-image {
+            flex: 1 1 45%; /* Image takes up about 45% of the width */
+            margin-right: 20px;
+            max-width: 45%; /* Ensure image doesn't exceed its container */
+            height: auto;
+            object-fit: contain;
+        }
+
+        .product-details {
+            flex: 1 1 50%; /* Details take up about 50% of the width */
+            max-width: 50%;
+        }
+
+        .product-title {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .product-price {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #c00; /* A typical "sale" or "price" color */
+            margin-bottom: 10px;
+        }
+
+        .product-features {
+            margin-bottom: 20px;
+        }
+
+        .product-features h3 {
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+
+        .product-features ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        .product-condition {
+            margin-bottom: 20px;
+            border: 1px solid #ddd; /* A light grey border */
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .product-condition h3 {
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+
+        .product-description {
+            margin-bottom: 20px;
+        }
+
+        .add-to-cart {
+            background-color: #f0c14b; /* Amazon-like yellow */
+            color: #111;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .product-page {
+                flex-direction: column; /* Stack image and details vertically */
+            }
+
+            .product-image, .product-details {
+                flex: 1 1 100%; /* Take full width */
+                max-width: 100%;
+                margin: 10px 0; /* Add some vertical margin */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="product-page">
+        <img class="product-image" src="rolex.jpg"
+        alt="Hoodie" alt="Rolex Submariner Date">
+
+        <div class="product-details">
+            <h1 class="product-title">Rolex Submariner Date (Model: 16610) - Second Hand</h1>
+            <p class="product-price">$8,500.00</p>
+
+            <div class="product-features">
+                <h3>Key Features</h3>
+                <ul>
+                    <li>Stainless Steel Case and Bracelet</li>
+                    <li>Automatic Movement</li>
+                    <li>Date Display</li>
+                    <li>Uni-Directional Rotating Bezel</li>
+                    <li>Scratch-Resistant Sapphire Crystal</li>
+                    <li>40mm Case Diameter</li>
+                </ul>
+            </div>
+
+            <div class="product-condition">
+                <h3>Condition: Very Good</h3>
+                <p>This Rolex Submariner Date (ref. 16610) is in very good second-hand condition.  The stainless steel case and bracelet have some minor surface scratches consistent with normal wear (see photos). The sapphire crystal is clean and free of scratches.  The watch keeps accurate time.  Service history is unknown.</p>
+            </div>
+
+            <div class="product-description">
+                <h3>Description</h3>
+                <p>A true icon of horology, this Rolex Submariner Date is a highly sought-after dive watch.  This model (16610) features a classic stainless steel case and bracelet, an automatic movement, and a date display. A timeless and prestigious timepiece.</p>
+            </div>
+
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+</body>
+</html>
